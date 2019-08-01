@@ -8,6 +8,8 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.RobotController;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Robots.Loops;
 import frc.robot.Robots.RobotMap;
 import frc.robot.Robots.Subsystems;
@@ -27,6 +29,9 @@ public class Robot extends IterativeRobot {
 
   @Override
   public void robotPeriodic() {
+
+    SmartDashboard.putNumber("Battery", RobotController.getBatteryVoltage());
+
   }
 
   @Override
