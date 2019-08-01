@@ -13,8 +13,6 @@ import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
 import edu.wpi.first.wpilibj.DoubleSolenoid;
-import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import frc.robot.Robots.RobotMap;
 
@@ -27,8 +25,6 @@ public class DriveTrain {
     private TalonSRX rightDrive;
     private TalonSRX rightDrive2;
     private TalonSRX rightDrive3;
-
-    private Joystick DriverStick;
 
     public DoubleSolenoid Air;
 
@@ -44,8 +40,6 @@ public class DriveTrain {
         rightDrive = RobotMap.rightDrive;
         rightDrive2 = RobotMap.rightDrive2;
         rightDrive3 = RobotMap.rightDrive3;
-
-        DriverStick = RobotMap.DriverStick; 
 
         Air = RobotMap.shifter;
 

@@ -7,7 +7,6 @@
 
 package frc.robot.Subsystems;
 
-import com.ctre.phoenix.ParamEnum;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.LimitSwitchNormal;
@@ -15,22 +14,15 @@ import com.ctre.phoenix.motorcontrol.LimitSwitchSource;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
-import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.Talon;
-
 import frc.robot.Robots.RobotMap;
 
 public class Elevator {
 
     private TalonSRX elevator;
-    
-    private Joystick OperatorStick;
 
     public Elevator(){
 
         elevator = RobotMap.elevator;
-
-        OperatorStick = RobotMap.OperatorStick;
 
         elevator.set(ControlMode.PercentOutput, 0);
 
