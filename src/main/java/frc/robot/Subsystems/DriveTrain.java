@@ -69,6 +69,19 @@ public class DriveTrain {
 
     }
 
+    public void driveDirect(double leftThrottle, double rightThrottle) {
+
+        leftDrive.set(ControlMode.PercentOutput, leftThrottle);
+        rightDrive.set(ControlMode.PercentOutput, rightThrottle);
+
+    }
+
+    public void arcadeDrive(double throttle, double turn) {
+
+        driveDirect(throttle-turn, throttle+turn);
+
+    }
+
     public void Movement(double leftThrottle,double rightThrottle){
 
         leftDrive.set(ControlMode.PercentOutput,leftThrottle);
