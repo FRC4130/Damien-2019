@@ -28,8 +28,8 @@ public class DriveTele implements ILoopable{
     DoubleSolenoid shifter;
 
     NetworkTable table = NetworkTableInstance.getDefault().getTable("limelight");
-    NetworkTableEntry tv = table.getEntry("tx");
-    NetworkTableEntry tx = table.getEntry("tv");
+    NetworkTableEntry tv = table.getEntry("tv");
+    NetworkTableEntry ty = table.getEntry("tx");
     NetworkTableEntry ta = table.getEntry("ta");
 
     double m_LimelightDriveCommand = 0.0;
@@ -91,6 +91,9 @@ public class DriveTele implements ILoopable{
         steer *= 1;
         drive *= 1;
         if (auto) {
+
+            train.Shifter(train.high);
+
             NetworkTableInstance.getDefault().getTable("limelight").getEntry("camMode").setNumber(0); //0
             NetworkTableInstance.getDefault().getTable("limelight").getEntry("ledMode").setNumber(3); //3
             if (m_LimelightHasValidTarget) {
@@ -103,6 +106,9 @@ public class DriveTele implements ILoopable{
             }
         }
         else {
+
+            train.Shifter(train.high);
+
             NetworkTableInstance.getDefault().getTable("limelight").getEntry("camMode").setNumber(0); //0
             NetworkTableInstance.getDefault().getTable("limelight").getEntry("ledMode").setNumber(3); //3
 
