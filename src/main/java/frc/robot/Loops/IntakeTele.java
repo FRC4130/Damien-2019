@@ -39,7 +39,7 @@ public class IntakeTele implements ILoopable{
     public void onLoop(){
 
         updateClamp();
-        takeIn.succ(joy.getRawAxis(5)*-.60);
+        takeIn.succ(joy.getRawAxis(5)*-.80);
 
     }
 
