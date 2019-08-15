@@ -32,7 +32,7 @@ public class IntakeTele implements ILoopable{
 
     public void onStart(){
 
-        takeIn.clamp(takeIn.closed);
+        takeIn.clamp(takeIn.open);
 
     }
 

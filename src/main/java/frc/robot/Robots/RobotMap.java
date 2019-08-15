@@ -52,7 +52,7 @@ public class RobotMap {
         DriverStick = new Joystick(0);
         OperatorStick = new Joystick(1);
 
-        shifter = new DoubleSolenoid(5, 6);
+        shifter = new DoubleSolenoid(1 , 0);
         clamp = new DoubleSolenoid(3, 2);
 
     }

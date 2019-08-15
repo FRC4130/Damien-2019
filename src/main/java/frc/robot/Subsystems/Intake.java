@@ -29,7 +29,7 @@ public class Intake {
 
         take = RobotMap.intake;
 
-        grabber.set(closed);
+        grabber.set(open);
 
     }
 

@@ -17,6 +17,7 @@ public class Loops {
         teleop.add(new DriveTele());
         teleop.add(new ElevatorTele());
         teleop.add(new IntakeTele());
+        teleop.add(new NavX());
 
     }
 

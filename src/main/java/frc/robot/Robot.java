@@ -7,6 +7,7 @@
 
 package frc.robot;
 
+import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.RobotController;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -25,14 +26,17 @@ public class Robot extends IterativeRobot {
     RobotMap.Init();
     Subsystems.Init();
 
+    CameraServer.getInstance().startAutomaticCapture();
+
   }
 
   @Override
   public void robotPeriodic() {
-
     SmartDashboard.putNumber("Battery", RobotController.getBatteryVoltage());
+    
 
   }
+
 
   @Override
   public void autonomousInit() {
